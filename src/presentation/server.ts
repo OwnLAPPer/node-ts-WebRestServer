@@ -32,7 +32,9 @@ export class Server{
     async start(){
         
         //* Middlewares
+        //? serializa a json el body en el formato raw 
         this.app.use(express.json());
+        //? serializa el formato url
         this.app.use(express.urlencoded({extended:true}));
 
         //* public folder
